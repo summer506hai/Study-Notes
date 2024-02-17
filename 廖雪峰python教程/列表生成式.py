@@ -16,6 +16,7 @@ def is_str(s):
 def lower(s):
     return s.lower()
 
-L2 = list(map(lower,list(filter(is_str,L1))))
+#L2 = list(map(lower,list(filter(is_str,L1))))
+L2 = list(map(lambda y:y.lower(),filter(lambda x:isinstance(x, str) ,L1)))   #使用匿名函数lambda
 assert L2 == ['hello', 'world', 'apple']
 print("测试通过！")
